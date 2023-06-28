@@ -59,8 +59,6 @@ class TrainTicket(Ticket):
             return self.basic_price
         elif self.fare_class == 'business':
             return self.basic_price * 1.2
-        else:
-            return None
 
 
 class PlaneTicket(TrainTicket):
@@ -74,8 +72,6 @@ class PlaneTicket(TrainTicket):
             return self.basic_price + luggage_price
         elif self.fare_class == 'business':
             return self.basic_price * 1.5 + luggage_price
-        else:
-            return None
 
 
 # Testování:
