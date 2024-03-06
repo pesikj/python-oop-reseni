@@ -10,6 +10,15 @@ Pokračuj ve své práci pro zásilkovou společnost. Společnost nově doručuj
 - Vytvoř si alespoň jeden objekt a zkus volání jeho funkcí. Současně si vytvoř "obyčejný" balík o zkontroluj, že u něj se nic nezměnilo.
 
 ```py
+class Package:
+    def __init__(self, address, weight, state):
+        self.address = address
+        self.weight = weight
+        self.state = state
+
+    def get_info(self):
+        return f"Balík na adresu {self.address} má hmotnost {self.weight} kg a je ve stavu {self.state}."
+
 class ValuablePackage(Package):
     def __init__(self, address, weight, value, state="nedoručen"):
         super().__init__(address, weight, state)
