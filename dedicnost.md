@@ -159,7 +159,7 @@ class Item:
         self.price = price
     def get_time_to_read(self):
         pass    
-class Book:
+class Book(Item):
     def __init__(self, title, price, pages):
         super().__init__(title, price)
         self.pages = pages
@@ -167,7 +167,7 @@ class Book:
         return f"Kniha '{self.title}' má {self.pages} stran a stojí {self.price} Kč."
     def get_time_to_read(self):
         return self.pages * 4 / 60
-class AudioBook:
+class AudioBoo(Item):
     def __init__(self, title, price, duration_in_hours, narrator):
         super().__init__(title, price)
         self.duration_in_hours = duration_in_hours
